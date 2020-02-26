@@ -1,0 +1,12 @@
+service: rsshub
+runtime: nodejs10
+
+network:
+  forwarded_ports:
+    - 80:1200
+    - 443:1200
+      # 以下是环境配置示例，具体可配置项见本文档配置章节
+env_variables:
+  CACHE_EXPIRE: '300'
+  HTTP_BASIC_AUTH_NAME: santuy
+  HTTP_BASIC_AUTH_PASS: snatuy2020
